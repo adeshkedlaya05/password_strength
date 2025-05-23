@@ -1,0 +1,194 @@
+.full-screen-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simulate stars using radial gradient pattern */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1px 1px at 20% 20%, white 100%, transparent 0),
+              radial-gradient(1px 1px at 70% 30%, white 100%, transparent 0),
+              radial-gradient(1px 1px at 40% 80%, white 100%, transparent 0),
+              radial-gradient(1px 1px at 90% 90%, white 100%, transparent 0),
+              radial-gradient(1px 1px at 10% 60%, white 100%, transparent 0);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle-bg 4s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes twinkle-bg {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+
+
+/* Centered white box */
+.password-box {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  letter-spacing: 0.03em;
+}
+
+/* Input group styling */
+.input-group {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+  height: 38px;
+}
+
+.input-group:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+.form-control {
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+    border: 1.0px solid #ccc; /* subtle border */
+   
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.btn-primary {
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px; /* Fully rounded on all corners */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  user-select: none;
+  height: 45px;
+  
+  margin-top: 1rem;    /* space above the button */
+  margin-bottom: 1rem; /* space below the button */
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.6);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.95); /* Button slightly shrinks when clicked */
+  box-shadow: 0 3px 6px rgba(0, 86, 179, 0.8);
+}
+
+.btn-primary:disabled {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* Strength text styling - fits inside password-box nicely */
+.strength-text {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Strength levels */
+.strength-text.weak {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  border: 1.5px solid #d32f2f;
+}
+
+.strength-text.moderate {
+  background-color: #fff9db;
+  color: #f9a825;
+  border: 1.5px solid #f9a825;
+}
+
+.strength-text.strong {
+  background-color: #e6f4ea;
+  color: #388e3c;
+  border: 1.5px solid #388e3c;
+}
+
+/* Simple fadeIn animation for strength text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Color-coded strength text */
+.text-weak {
+  color: #dc3545;
+}
+
+.text-moderate {
+  color: #ffc107;
+}
+
+.text-strong {
+  color: #28a745;
+}
+
+.strength-text {
+  font-size: 1.1rem;
+}
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #666;
+  z-index: 2;
+}
+
