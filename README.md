@@ -25,7 +25,9 @@ A simple web application to check the strength of a password using React for the
 ---
 
 ## Project Structure/deployment diagram
-![image](https://github.com/user-attachments/assets/5bf9783e-6c41-445c-bcf3-1c00b8286f93)
+![image](https://github.com/user-attachments/assets/056cee11-8adc-49f6-8dde-b7de9671a03e)
+
+
 
 ## Output
 ![Screenshot 2025-05-23 151945](https://github.com/user-attachments/assets/b5be1bbb-9c92-4d17-a096-f96e7bd1831b)
@@ -36,7 +38,7 @@ A simple web application to check the strength of a password using React for the
 ## Clone and Run the Application
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+https://github.com/adeshkedlaya05/password_strength.git
 ```
 
 
