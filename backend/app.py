@@ -14,7 +14,7 @@ def check_strength():
     data = request.get_json()
     password = data.get('password', '')
 
-    # Basic password strength logic (replace with your own later)
+    # Basic password strength logic 
     score = 0
     if len(password) >= 8:
         score += 1
