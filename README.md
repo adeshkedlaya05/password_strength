@@ -24,6 +24,24 @@ A simple web application to check the strength of a password using React for the
 
 ---
 
+## API Endpoints
+
+### 1. GET `/`
+Returns a simple message confirming that the Flask API is running. Useful as a health check endpoint.
+
+---
+
+### 2. POST `/check-strength`
+Accepts a password in the request body and evaluates its strength based on basic criteria:
+- Minimum length
+- Presence of uppercase letters
+- Presence of digits
+- Presence of special characters
+
+Returns the evaluated password strength as one of: `"Weak"`, `"Moderate"`, `"Strong"`, or `"Very Strong"`.
+
+---
+
 ## Project Structure/deployment diagram
 ![image](https://github.com/user-attachments/assets/056cee11-8adc-49f6-8dde-b7de9671a03e)
 
